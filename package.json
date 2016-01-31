@@ -1,0 +1,43 @@
+{
+  "name": "ort-cli",
+  "version": "0.0.1",
+  "description": "Command line interface for OrtJS",
+  "homepage": "http://tools.wikimedia.pl/~derbeth/ort/",
+  "author": "Piotr Kubowicz <derbeth@interia.pl> (https://github.com/Derbeth)",
+  "contributors": [],
+  "keywords": [
+    "spelling",
+    "ortography",
+    "Polish"
+  ],
+  "bin": {
+    "ortjs": "bin/ortjs"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Derbeth/ortjs-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Derbeth/ortjs-cli/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "nopt": "latest",
+    "ort": "../ortjs"
+  },
+  "devDependencies": {
+    "chai": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mocha": "latest"
+  },
+  "scripts": {
+    "check": "eslint --fix bin/ortjs lib && eslint --fix --env mocha test",
+    "coverage": "istanbul cover --include-all-sources _mocha",
+    "test": "npm run check && mocha",
+    "zip": "rm -f ort-cli.zip && zip -r ort-cli.zip bin lib node_modules package.json README.md"
+  }
+}

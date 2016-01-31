@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+'use strict';
+
+process.title = 'grunt';
+
+var nopt = require('nopt'),
+    runner = require('../lib/runner');
+
+var optDefs = {
+    encoding: String,
+    help: Boolean
+};
+
+var opts = nopt(optDefs);
+
+if (opts.help) {
+    console.log('Usage: ortjs [options] <input file> <output file>');
+    console.log('');
+    console.log('Using - as file name means standard input/output');
+    console.log('');
+    console.log('Options:');
+    Object.keys(optDefs).sort().forEach(function (o) { console.log('  --' + o) });
+
+    process.exit();
+}
+
+var input = opts.argv.remain[0] || '-';
+var output = opts.argv.remain[1] || '-';
+
+runner(input, output, opts);
