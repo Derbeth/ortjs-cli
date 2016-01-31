@@ -25,6 +25,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "iconv-lite": "latest",
     "nopt": "latest",
     "ort": "../ortjs"
   },
@@ -38,6 +39,6 @@
     "check": "eslint --fix bin/ortjs lib && eslint --fix --env mocha test",
     "coverage": "istanbul cover --include-all-sources _mocha",
     "test": "npm run check && mocha",
-    "zip": "rm -f ort-cli.zip && zip -r ort-cli.zip bin lib node_modules package.json README.md"
+    "zip": "rm -f ort-cli.zip && zip -r ort-cli.zip bin lib node_modules/iconv-lite node_modules/ort node_modules/nopt package.json README.md"
   }
 }
