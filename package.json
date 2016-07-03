@@ -25,15 +25,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "iconv-lite": "latest",
-    "nopt": "latest",
-    "ort": "~0.1.1"
+    "iconv-lite": "0.4.13",
+    "nopt": "3.0.6",
+    "ort": "~0.1.2"
   },
   "devDependencies": {
-    "chai": "latest",
-    "eslint": "latest",
-    "istanbul": "latest",
-    "mocha": "latest"
+    "chai": "3.5.0",
+    "eslint": "3.0.0",
+    "istanbul": "0.4.4",
+    "mocha": "2.5.3"
   },
   "scripts": {
     "check": "eslint --fix bin/ortjs lib && eslint --fix --env mocha test",
