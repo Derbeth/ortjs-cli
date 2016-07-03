@@ -8,6 +8,13 @@ var nopt = require('nopt'),
     runner = require('../lib/runner');
 
 var optDefs = {
+    // Core OrtJS
+    fixAmericanNumbers: Boolean,
+    fixBrs: Boolean,
+    interpunction: Boolean,
+    risky: Boolean,
+    typography: Boolean,
+    // CLI-specific
     encoding: String,
     help: Boolean
 };
