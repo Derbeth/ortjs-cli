@@ -1,6 +1,6 @@
 {
   "name": "ort-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Command line interface for OrtJS",
   "homepage": "http://tools.wikimedia.pl/~derbeth/ort/",
   "author": "Piotr Kubowicz <derbeth@interia.pl> (https://github.com/Derbeth)",
