@@ -6,8 +6,8 @@ const exec = require('child_process').exec,
 describe("runner", function() {
     describe("from file to file", function() {
         afterEach(function() {
-            fs.unlink('/tmp/test-in.txt');
-            fs.unlink('/tmp/test-out.txt');
+            fs.unlink('/tmp/test-in.txt', rethrow);
+            fs.unlink('/tmp/test-out.txt', rethrow);
         });
 
         it("saves corrected input", function(done) {
@@ -23,7 +23,7 @@ describe("runner", function() {
 
     describe("using Windows EOL and encoding", function() {
         afterEach(function() {
-            fs.unlink('/tmp/test-out2.txt');
+            fs.unlink('/tmp/test-out2.txt', rethrow);
         });
 
         it("maintains EOL and encoding", function(done) {
@@ -39,3 +39,7 @@ describe("runner", function() {
         });
     });
 });
+
+function rethrow (err) {
+    if (err) throw err;
+}
